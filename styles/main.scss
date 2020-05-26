@@ -1,0 +1,158 @@
+$light-color: #ffffff;
+$light-border-color: #daded4;
+$dark-border-color: #2f4858;
+$nav-height: 70px;
+
+* {
+  transition: all 0.5s ease;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+  font-size: 14px;
+}
+
+nav {
+  height: $nav-height;
+  border-bottom: 1px solid $light-border-color;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+.tooltip {
+  display: none;
+}
+
+#hovered-icon-text {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: $nav-height;
+  padding: 0 10px 0 10px;
+}
+
+#hovered-icon-text:not(.visible) {
+  opacity: 0;
+}
+
+#hovered-icon-text.visible {
+  opacity: 1;
+}
+
+.nav-item {
+  font-size: 2rem;
+  width: $nav-height;
+  height: $nav-height;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.nav-icons {
+  border-right: $dark-border-color 1px solid;
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  height: 100%;
+  padding: 20px;
+  margin: auto;
+  width: fit-content;
+}
+
+.page-trick-name {
+  text-align: center;
+}
+
+section {
+  margin: auto;
+  text-align: justify;
+}
+
+#trick-of-the-week {
+  float: left;
+  margin-right: 50px;
+}
+
+.trick-card {
+  border: 2px solid $dark-border-color;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.page-header {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.trick-canvas {
+  background-color: $dark-border-color;
+  width: 200px;
+  height: 250px;
+}
+
+.trick-container {
+  text-align: center;
+}
+.trick-card-wrapper {
+  display: inline-block;
+}
+
+.trick-desc-wrapper {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 0;
+  height: 0;
+}
+
+.trick-desc-alone {
+  display: block;
+  border: 2px solid $dark-border-color;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 5px;
+  width: 200px;
+  height: fit-content;
+}
+
+.trick-desc {
+  height: 50px;
+}
+
+.trick-card > .trick-desc {
+  border-top: 2px solid $dark-border-color;
+}
+
+.trick-desc {
+  text-align: center;
+  height: fit-content;
+}
+
+.trick-desc > div {
+  padding: 5px;
+}
+
+footer {
+  border: 1px solid $light-border-color;
+  text-align: center;
+  padding: 20px;
+}

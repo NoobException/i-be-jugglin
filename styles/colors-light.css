@@ -1,0 +1,23 @@
+body {
+  background-color: #ffffff;
+  color: #0b1216;
+}
+
+nav {
+  background-color: #ffffff;
+}
+
+.nav-item {
+  background-color: #ffffff;
+  color: #2f4858;
+}
+
+.nav-item:hover {
+  background-color: #2f4858;
+  color: #ffffff;
+}
+
+#hovered-icon-text {
+  color: #2f4858;
+}
+/*# sourceMappingURL=colors-light.css.map */

@@ -1,0 +1,19 @@
+body {
+  background-color: #2f4858;
+  color: #daded4;
+}
+
+nav {
+  background-color: #2f4858;
+}
+
+.nav-item {
+  background-color: #2f4858;
+  color: #daded4;
+}
+
+.nav-item:hover {
+  background-color: #daded4;
+  color: #2f4858;
+}
+/*# sourceMappingURL=colors-dark.css.map */

@@ -1,0 +1,24 @@
+$primary-color:#2f4858;
+$primary-light-color: #daded4;
+$dark-border-color: #2f4858;
+
+body {
+    background-color: $primary-color;
+    color: $primary-light-color;
+}
+
+
+nav {
+    background-color: $primary-color;
+}
+
+
+.nav-item {
+    background-color: $primary-color;
+    color: $primary-light-color;
+}
+
+.nav-item:hover {
+    background-color: $primary-light-color;
+    color: $primary-color;
+}

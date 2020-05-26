@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,OAAO,CAAC;EACN,KAAK,EAAE,GAAG;CACX",
+    "sources": [
+        "narrow-screen.scss"
+    ],
+    "names": [],
+    "file": "narrow-screen.css"
+}

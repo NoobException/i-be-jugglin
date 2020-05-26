@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+
+    <link id="light-mode-link" rel="stylesheet" type="text/css" href="styles/colors-light.css" />
+    <link id="dark-mode-link" rel="stylesheet alternate" type="text/css" href="styles/colors-dark.css" />
+
+    <link rel="stylesheet" type="text/css" href="styles/narrow-screen.css" media="screen and (max-width: 800px)" />
+    <link rel="stylesheet" type="text/css" href="styles/wide-screen.css" media="screen and (min-width: 801px)" />
+
+    <title>Juggling</title>
+</head>
+
+<body>
+
+    <nav id="top-nav">
+        <div class="nav-icons">
+            <a class="nav-item">
+                <ion-icon name="home-outline"></ion-icon>
+                <span class="tooltip">Homepage</span>
+            </a>
+
+            <a class="nav-item">
+                <ion-icon name="cellular-outline"></ion-icon>
+                <span class="tooltip">Tricks by difficulty</span>
+            </a>
+
+            <div class="nav-item" onclick="toggleColorMode()">
+                <ion-icon id="moon-icon" name="moon-outline"></ion-icon>
+                <ion-icon id="sun-icon" class="hidden" name="sunny-outline"></ion-icon>
+                <span id = "color-mode-tooltip" class="tooltip">Switch to dark mode</span>
+            </div>
+        </div>
+        <div id="hovered-icon-text">
+
+        </div>
+    </nav>
+
+    <nav id="mobile-nav">
+        <div class="nav-icons">
+            <a href="" class="nav-item">
+                <ion-icon name="menu-outline"></ion-icon>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="page-trick-name"> [Trick-Name] </h1>
+
+        <div class="trick-container">
+            <div class="trick-card-wrapper">
+                <div class="trick-card">
+                    <div class="canvas-wrapper">
+                        <canvas class="trick-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trick-desc-wrapper">
+                <div class="trick-desc trick-desc-alone">
+                    <div>[trick-difficulty]</div>
+                    <div>[trick-siteswap]</div>
+                    <div>[prerequisites]</div>
+                    <div>[related-tricks]</div>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <h1>Lorem</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                doloremque illo mollitia recusandae fuga, molestiae quam. Nobis
+                dicta maxime expedita hic! Tempora eius consectetur fugiat minus
+                vitae asperiores rerum, in aliquam dolore voluptatibus facere a
+                atque modi incidunt? Voluptatibus earum, ducimus molestias animi
+                consequuntur ad quis quidem sapiente quo consectetur.
+            </p>
+        </section>
+
+        <section>
+            <h1>Ipsum</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+                doloremque illo mollitia recusandae fuga, molestiae quam. Nobis
+                dicta maxime expedita hic! Tempora eius consectetur fugiat minus
+                vitae asperiores rerum, in aliquam dolore voluptatibus facere a
+                atque modi incidunt? Voluptatibus earum, ducimus molestias animi
+                consequuntur ad quis quidem sapiente quo consectetur.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        Created by Pike and Hike &copy
+    </footer>
+</body>
+<script src="js/main.js"></script>
+
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</html>

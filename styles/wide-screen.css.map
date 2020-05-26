@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,OAAO,CAAC;EACN,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "wide-screen.scss"
+    ],
+    "names": [],
+    "file": "wide-screen.css"
+}
