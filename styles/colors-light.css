@@ -20,4 +20,16 @@ nav {
 #hovered-icon-text {
   color: #2f4858;
 }
+
+#top-nav .nav-icons {
+  border-color: #2f4858;
+}
+
+.trick-desc-alone {
+  border-color: #2f4858;
+}
+
+footer {
+  border-color: #daded4;
+}
 /*# sourceMappingURL=colors-light.css.map */

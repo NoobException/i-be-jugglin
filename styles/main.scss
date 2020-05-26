@@ -100,7 +100,7 @@ nav {
 }
 
 #top-nav .nav-icons {
-  border-right: $dark-border-color 1px solid;
+  border-right: 1px solid;
 }
 
 #mobile-nav {
@@ -152,7 +152,7 @@ section {
 }
 
 .trick-card {
-  border: 2px solid $dark-border-color;
+  border: 2px solid ;
   border-radius: 5px;
   width: fit-content;
 }
@@ -189,7 +189,7 @@ section {
 
 .trick-desc-alone {
   display: block;
-  border: 2px solid $dark-border-color;
+  border: 2px solid ;
   border-radius: 5px;
   margin-left: 10px;
   padding: 5px;
@@ -202,7 +202,7 @@ section {
 }
 
 .trick-card > .trick-desc {
-  border-top: 2px solid $dark-border-color;
+  border-top: 2px solid ;
 }
 
 .trick-desc {
@@ -221,5 +221,5 @@ footer {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  border-top: 1px $light-border-color solid;
+  border-top: 1px solid;
 }

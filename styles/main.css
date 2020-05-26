@@ -127,7 +127,7 @@ nav {
 }
 
 #top-nav .nav-icons {
-  border-right: #2f4858 1px solid;
+  border-right: 1px solid;
 }
 
 #mobile-nav {
@@ -181,7 +181,7 @@ section {
 }
 
 .trick-card {
-  border: 2px solid #2f4858;
+  border: 2px solid;
   border-radius: 5px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -221,7 +221,7 @@ section {
 
 .trick-desc-alone {
   display: block;
-  border: 2px solid #2f4858;
+  border: 2px solid;
   border-radius: 5px;
   margin-left: 10px;
   padding: 5px;
@@ -236,7 +236,7 @@ section {
 }
 
 .trick-card > .trick-desc {
-  border-top: 2px solid #2f4858;
+  border-top: 2px solid;
 }
 
 .trick-desc {
@@ -267,6 +267,6 @@ footer {
           align-items: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  border-top: 1px #daded4 solid;
+  border-top: 1px solid;
 }
 /*# sourceMappingURL=main.css.map */
