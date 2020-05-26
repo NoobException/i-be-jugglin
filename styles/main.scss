@@ -4,7 +4,7 @@ $dark-border-color: #2f4858;
 $nav-height: 70px;
 
 * {
-  transition: all 0.5s ease;
+  transition: color, background-color, 0.5s ease;
 }
 
 body {
@@ -62,9 +62,12 @@ nav {
 }
 
 .nav-icons {
-  border-right: $dark-border-color 1px solid;
   display: flex;
   flex-direction: row;
+}
+
+#top-nav .nav-icons{
+  border-right: $dark-border-color 1px solid;
 }
 
 main {

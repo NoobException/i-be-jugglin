@@ -1,6 +1,6 @@
 * {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: color, background-color, 0.5s ease;
+  transition: color, background-color, 0.5s ease;
 }
 
 body {
@@ -78,7 +78,6 @@ nav {
 }
 
 .nav-icons {
-  border-right: #2f4858 1px solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,6 +85,10 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+#top-nav .nav-icons {
+  border-right: #2f4858 1px solid;
 }
 
 main {
