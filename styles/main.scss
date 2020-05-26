@@ -30,7 +30,12 @@ body,
 .juggler-ball {
   fill: red;
   stroke: black;
-  stroke-width: 2;
+	stroke-width: 2;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
@@ -50,6 +55,8 @@ nav {
   top: 0;
   z-index: 999;
 }
+
+
 
 .hidden {
   display: none;
