@@ -54,4 +54,14 @@ footer {
   stroke: black;
   stroke-width: 1;
 }
+
+.trick-slider {
+  background: #2f4858;
+}
+
+.trick-slider::-moz-range-thumb,
+.trick-slider::-webkit-slider-thumb {
+  border-color: #2f4858;
+  background: #ffffff;
+}
 /*# sourceMappingURL=colors-light.css.map */

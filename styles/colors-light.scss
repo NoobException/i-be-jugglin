@@ -59,3 +59,13 @@ footer {
 	stroke: black;
 	stroke-width: 1;
 }
+
+.trick-slider {
+	background: $primary-dark-color; 
+}
+
+.trick-slider::-moz-range-thumb,
+.trick-slider::-webkit-slider-thumb {
+	border-color: $primary-dark-color;
+	background: $primary-color;
+}

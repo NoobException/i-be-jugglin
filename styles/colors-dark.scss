@@ -42,3 +42,13 @@ nav {
 	stroke: #062331;
   stroke-width: 1;
 }
+
+.trick-slider {
+	background: $primary-light-color; 
+}
+
+.trick-slider::-moz-range-thumb,
+.trick-slider::-webkit-slider-thumb {
+	border-color: $primary-light-color;
+	background: $primary-color;
+}

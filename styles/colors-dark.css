@@ -38,4 +38,14 @@ nav {
   stroke: #062331;
   stroke-width: 1;
 }
+
+.trick-slider {
+  background: #daded4;
+}
+
+.trick-slider::-moz-range-thumb,
+.trick-slider::-webkit-slider-thumb {
+  border-color: #daded4;
+  background: #2f4858;
+}
 /*# sourceMappingURL=colors-dark.css.map */
