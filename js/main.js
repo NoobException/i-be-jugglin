@@ -1,9 +1,28 @@
-var colorMode = 'light';
+
+var colorMode = loadColorMode();
+updateColorStyle(colorMode);
+
+function saveColorMode(mode)
+{
+	document.cookie=mode;
+}
+
+function loadColorMode()
+{
+	let mode = document.cookie;
+	if (mode == '') {
+		saveColorMode('light');
+		mode = 'light';
+	}
+	return mode;
+}
 
 function toggleColorMode() {
-	if (colorMode == 'light') colorMode = 'dark';
+	if (colorMode == 'light')
+		colorMode = 'dark';
 	else colorMode = 'light';
 
+	saveColorMode(colorMode);
 	updateColorStyle(colorMode, 0);
 	console.log('Toggling color mode.');
 }
@@ -90,10 +109,16 @@ function selectNavByPlatform() {
 
 function toggleNav()
 {
-
+  let navDropdown = document.querySelector("#mobile-nav .nav-dropdown");
+  if (navDropdown.classList.contains("hidden"))
+  {
+    navDropdown.classList.remove("hidden");
+  } else {
+    navDropdown.classList.add("hidden");
+  }
 }
 
 
 // selectNavByPlatform();
- showMobileNav()
-// showDesktopNav();
+// showMobileNav()
+showDesktopNav();
