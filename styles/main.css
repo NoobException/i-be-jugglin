@@ -1,6 +1,15 @@
-* {
-  -webkit-transition: color, background-color, 0.5s ease;
-  transition: color, background-color, 0.5s ease;
+body,
+#top-nav,
+.nav-item {
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+#hovered-icon-text {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 body {

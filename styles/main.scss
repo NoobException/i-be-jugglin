@@ -3,8 +3,15 @@ $light-border-color: #daded4;
 $dark-border-color: #2f4858;
 $nav-height: 70px;
 
-* {
-  transition: color, background-color, 0.5s ease;
+body,
+#top-nav,
+.nav-item {
+  transition: color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+#hovered-icon-text {
+  transition: opacity 0.5s ease;
 }
 
 body {
@@ -22,8 +29,6 @@ nav {
   top: 0;
   z-index: 999;
 }
-
-
 
 .hidden {
   display: none;
