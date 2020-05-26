@@ -15,24 +15,9 @@ body,
   transition: opacity 0.5s ease;
 }
 
-.juggler-body {
-  fill: white;
-  stroke: black;
-  stroke-width: 2;
-}
-
-.juggler-arm {
-  fill: none;
-  stroke: black;
-  stroke-width: 2;
-}
-
 .juggler-ball {
-  fill: red;
-  stroke: black;
-	stroke-width: 2;
+  transition: fill ease 0.5s;
 }
-
 html, body {
   height: 100%;
   margin: 0;

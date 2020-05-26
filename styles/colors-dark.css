@@ -20,4 +20,22 @@ nav {
 #top-nav .nav-icons {
   border-color: #daded4;
 }
+
+.juggler-body {
+  stroke: #daded4;
+  fill: none;
+  stroke-width: 1;
+}
+
+.juggler-arm {
+  fill: none;
+  stroke: #daded4;
+  stroke-width: 1;
+}
+
+.juggler-ball {
+  fill: #f35f51;
+  stroke: #062331;
+  stroke-width: 1;
+}
 /*# sourceMappingURL=colors-dark.css.map */

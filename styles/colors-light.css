@@ -22,6 +22,10 @@ nav {
 }
 
 #top-nav .nav-icons {
+  border-color: #daded4;
+}
+
+.trick-card {
   border-color: #2f4858;
 }
 
@@ -31,5 +35,23 @@ nav {
 
 footer {
   border-color: #daded4;
+}
+
+.juggler-body {
+  fill: none;
+  stroke: #2f4858;
+  stroke-width: 1;
+}
+
+.juggler-arm {
+  fill: none;
+  stroke: #2f4858;
+  stroke-width: 1;
+}
+
+.juggler-ball {
+  fill: #51f38a;
+  stroke: black;
+  stroke-width: 1;
 }
 /*# sourceMappingURL=colors-light.css.map */

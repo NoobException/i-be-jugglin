@@ -1,39 +1,61 @@
-$primary-color:#ffffff;
+$primary-color: #ffffff;
 $light-border-color: #daded4;
 $primary-dark-color: #2f4858;
 $primary-font-color: darken($primary-dark-color, $amount: 20%);
 
 body {
-    background-color: $primary-color;
-    color: $primary-font-color;
+	background-color: $primary-color;
+	color: $primary-font-color;
 }
 
 nav {
-    background-color: $primary-color;
+	background-color: $primary-color;
 }
 
 .nav-item {
-    background-color: $primary-color;
-    color: $primary-dark-color;
+	background-color: $primary-color;
+	color: $primary-dark-color;
 }
 
 .nav-item:hover {
-    background-color: $primary-dark-color;
-    color: $primary-color;
+	background-color: $primary-dark-color;
+	color: $primary-color;
 }
 
 #hovered-icon-text {
-    color: $primary-dark-color;
+	color: $primary-dark-color;
 }
 
 #top-nav .nav-icons {
-    border-color: $primary-dark-color;
+	border-color: $light-border-color;
+}
+
+.trick-card {
+  border-color: $primary-dark-color;
 }
 
 .trick-desc-alone {
-    border-color: $primary-dark-color;
+	border-color: $primary-dark-color;
 }
 
 footer {
-    border-color: $light-border-color;
+	border-color: $light-border-color;
+}
+
+.juggler-body {
+	fill: none;
+	stroke: $primary-dark-color;
+	stroke-width: 1;
+}
+
+.juggler-arm {
+	fill: none;
+	stroke: $primary-dark-color;
+	stroke-width: 1;
+}
+
+.juggler-ball {
+	fill:#51f38a;
+	stroke: black;
+	stroke-width: 1;
 }
