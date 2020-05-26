@@ -1,6 +1,12 @@
-* {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+body,
+#top-nav,
+.nav-item {
+  transition: color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+#hovered-icon-text {
+  transition: opacity 0.5s ease;
 }
 
 body {
@@ -12,14 +18,8 @@ body {
 nav {
   height: 70px;
   border-bottom: 1px solid #daded4;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: -webkit-sticky;
+  flex-direction: row;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -35,16 +35,9 @@ nav {
 
 #hovered-icon-text {
   font-size: 1.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   height: 70px;
   padding: 0 10px 0 10px;
 }
@@ -61,39 +54,23 @@ nav {
   font-size: 2rem;
   width: 70px;
   height: 70px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   display: flex;
   cursor: pointer;
 }
 
 .nav-icons {
   border-right: #2f4858 1px solid;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 main {
   height: 100%;
   padding: 20px;
   margin: auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -114,8 +91,6 @@ section {
 .trick-card {
   border: 2px solid #2f4858;
   border-radius: 5px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -157,8 +132,6 @@ section {
   margin-left: 10px;
   padding: 5px;
   width: 200px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -172,8 +145,6 @@ section {
 
 .trick-desc {
   text-align: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -186,4 +157,5 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
 /*# sourceMappingURL=main.css.map */
