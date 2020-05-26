@@ -3,52 +3,56 @@ $primary-light-color: #daded4;
 $dark-border-color: #2f4858;
 
 body {
-	background-color: $primary-color;
-	color: $primary-light-color;
+  background-color: $primary-color;
+  color: $primary-light-color;
 }
 
 nav {
-	background-color: $primary-color;
+  background-color: $primary-color;
 }
 
 .nav-item {
-	background-color: $primary-color;
-	color: $primary-light-color;
+  background-color: $primary-color;
+  color: $primary-light-color;
 }
 
 .nav-item:hover {
-	background-color: $primary-light-color;
-	color: $primary-color;
+  background-color: $primary-light-color;
+  color: $primary-color;
 }
 
 #top-nav .nav-icons {
-	border-color: $primary-light-color;
+  border-color: $primary-light-color;
 }
 
 .juggler-body {
-	stroke: #daded4;
-	fill: none;
-	stroke-width: 1;
+  stroke: #daded4;
+  fill: none;
+  stroke-width: 1;
 }
 
 .juggler-arm {
-	fill: none;
-	stroke: $primary-light-color;
-	stroke-width: 1;
+  fill: none;
+  stroke: $primary-light-color;
+  stroke-width: 1;
 }
 
 .juggler-ball {
-	fill:#f35f51;
-	stroke: #062331;
+  fill: #f35f51;
+  stroke: #062331;
   stroke-width: 1;
 }
 
 .trick-slider {
-	background: $primary-light-color; 
+  background: $primary-light-color;
 }
 
-.trick-slider::-moz-range-thumb,
+.trick-slider::-moz-range-thumb {
+  border-color: $primary-light-color;
+  background: $primary-color;
+}
+
 .trick-slider::-webkit-slider-thumb {
-	border-color: $primary-light-color;
-	background: $primary-color;
+  border-color: $primary-light-color;
+  background: $primary-color;
 }

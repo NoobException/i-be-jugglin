@@ -18,7 +18,8 @@ body,
 .juggler-ball {
   transition: fill ease 0.5s;
 }
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -40,8 +41,6 @@ nav {
   top: 0;
   z-index: 999;
 }
-
-
 
 .hidden {
   display: none;
@@ -138,7 +137,7 @@ section {
 }
 
 .trick-card {
-  border: 2px solid ;
+  border: 2px solid;
   border-radius: 5px;
   width: fit-content;
 }
@@ -175,7 +174,7 @@ section {
 
 .trick-desc-alone {
   display: block;
-  border: 2px solid ;
+  border: 2px solid;
   border-radius: 5px;
   margin-left: 10px;
   padding: 5px;
@@ -188,7 +187,7 @@ section {
 }
 
 .trick-card > .trick-desc {
-  border-top: 2px solid ;
+  border-top: 2px solid;
 }
 
 .trick-desc {
@@ -201,39 +200,47 @@ section {
 }
 
 .slider-wrapper {
-  width: 100%; 
+  width: 100%;
   padding: 20px 0 20px 0;
 }
 
 .trick-slider {
   transition: background-color 0.5s ease;
-  -webkit-appearance: none;  
+  -webkit-appearance: none;
   appearance: none;
   border-radius: 5px;
-  width: 100%; 
-  height: 5px; 
-  outline: none; 
-  opacity: 0.7; 
-  transition: opacity .2s;
+  width: 100%;
+  height: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }
 
 .trick-slider:hover {
   opacity: 1;
 }
 
-.trick-slider::-moz-range-thumb,
 .trick-slider::-webkit-slider-thumb {
- -webkit-appearance: none; 
+  -webkit-appearance: none;
   transition: background-color 0.5s ease;
   appearance: none;
-  width: 15px; 
+  width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 2px solid; 
-  cursor: pointer; 
+  border: 2px solid;
+  cursor: pointer;
 }
 
-
+.trick-slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  transition: background-color 0.5s ease;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid;
+  cursor: pointer;
+}
 
 footer {
   height: $footer-height;

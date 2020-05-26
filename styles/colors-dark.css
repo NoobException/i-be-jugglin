@@ -43,9 +43,14 @@ nav {
   background: #daded4;
 }
 
-.trick-slider::-moz-range-thumb,
+.trick-slider::-moz-range-thumb {
+  border-color: #daded4;
+  background: #2f4858;
+}
+
 .trick-slider::-webkit-slider-thumb {
   border-color: #daded4;
   background: #2f4858;
 }
+
 /*# sourceMappingURL=colors-dark.css.map */

@@ -14,15 +14,38 @@ function getLength(ctx, length) {
 class JugglerRenderer {
   constructor(juggler) {
     this.juggler = juggler;
+
     this.main_div = document.createElement("div");
-    this.main_div.setAttribute("style", "display: flex;");
+    this.main_div.classList.add("trick-card-wrapper");
+
+    let trick_card = document.createElement("div");
+    trick_card.classList.add("trick-card");
+
+    let canvas_wrapper = document.createElement("div");
+    canvas_wrapper.classList.add("canvas-wrapper");
+
+    let slider_wrapper = document.createElement("div");
+    slider_wrapper.classList.add("slider-wrapper");
+
+    this.slider = document.createElement("input");
+    this.slider.classList.add("trick-slider");
+    this.slider.setAttribute("type", "range");
+    this.slider.setAttribute("min", "0");
+    this.slider.setAttribute("max", "100");
+    this.slider.setAttribute("value", "100");
+
+    trick_card.appendChild(canvas_wrapper);
+    slider_wrapper.appendChild(this.slider);
+    this.main_div.appendChild(trick_card);
+    this.main_div.appendChild(slider_wrapper);
+
     this.svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     this.svg.setAttribute("width", "100");
     this.svg.setAttribute("height", "150");
     this.svg.setAttribute("viewBox", "-50, -100, 100, 150");
     this.svg.style.width = "200px";
     this.svg.style.height = "300px";
-    this.main_div.appendChild(this.svg);
+    canvas_wrapper.appendChild(this.svg);
 
     let juggler_body = document.createElementNS(
       "http://www.w3.org/2000/svg",
@@ -511,7 +534,7 @@ const FPS = 60;
 if (juggler_renderers.length != 0) {
   setInterval(() => {
     juggler_renderers.forEach((renderer) => {
-      renderer.update(1 / FPS);
+      renderer.update(renderer.slider.value / 100 / FPS);
     });
   }, 1000 / FPS);
 }
