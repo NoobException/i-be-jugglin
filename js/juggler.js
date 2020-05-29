@@ -53,6 +53,7 @@ class JugglerRenderer {
     );
     juggler_body.classList.add("juggler-body");
     juggler_body.setAttribute("points", "-30,-10 30,-10 20,40 -20,40");
+    juggler_body.setAttribute("stroke-linejoin", "round");
     this.svg.appendChild(juggler_body);
 
     let juggler_head = document.createElementNS(
@@ -71,12 +72,14 @@ class JugglerRenderer {
       "polyline"
     );
     this.juggler_arm_left.classList.add("juggler-arm");
+    this.juggler_arm_left.setAttribute("stroke-linejoin", "round");
     this.svg.appendChild(this.juggler_arm_left);
 
     this.juggler_arm_right = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "polyline"
     );
+    this.juggler_arm_right.setAttribute("stroke-linejoin", "round");
     this.juggler_arm_right.classList.add("juggler-arm");
     this.svg.appendChild(this.juggler_arm_right);
 
