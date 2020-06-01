@@ -1,0 +1,348 @@
+html {
+  height: 100%;
+}
+
+* {
+  font-family: "Varela Round", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  height: 100%;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  height: 100%;
+  -ms-grid-rows: 1fr minmax(300px, 1fr);
+      grid-template-rows: 1fr minmax(300px, 1fr);
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+      grid-template-areas: "menu" "timeline";
+  grid-gap: 1px;
+  background-color: #aaa;
+}
+
+#menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: menu;
+  background-color: #aaa;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: 1fr 2fr 2fr;
+      grid-template-columns: 1fr 2fr 2fr;
+      grid-template-areas: "juggler trick-menu event-menu";
+  grid-gap: 1px;
+}
+
+#timeline {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: timeline;
+  background-color: #fff;
+}
+
+#juggler {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: juggler;
+  background-color: #fff;
+}
+
+#trick-menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: trick-menu;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1px;
+  -ms-grid-rows: 2fr 4fr;
+      grid-template-rows: 2fr 4fr;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+      grid-template-areas: "upper-menu" "trick-notation";
+}
+
+#event-menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: event-menu;
+  background-color: #fff;
+  padding: 5px;
+}
+
+#upper-menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: upper-menu;
+  background-color: #fff;
+  padding: 10px;
+}
+
+#trick-notation {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: trick-notation;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+#copy-button {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  font-size: 2rem;
+  border-radius: 5px;
+  border: #aaa 1px dashed;
+  background-color: #fefefe;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#copy-button:hover {
+  background-color: #e5e5e5;
+}
+
+#notation {
+  padding: 0 10px 0 10px;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.value-wrapper {
+  margin-bottom: 20px;
+}
+
+input[type=button] {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #2f4858;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #385669;
+}
+
+input[type=button].danger,
+.danger {
+  background-color: #c04b36;
+}
+
+input[type=button].danger:hover,
+.danger:hover {
+  background-color: #cb5945;
+}
+
+input[type=text] {
+  padding: 10px;
+  border: 2px solid #394a6d;
+  border-radius: 2px;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+}
+
+.custom-select {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.custom-select-trigger {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  border-width: 2px;
+  border-color: #394a6d;
+  border-style: solid;
+}
+
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 2px solid #394a6d;
+  border-top: 0;
+  visibility: hidden;
+  background: #fff;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.custom-select.open .custom-options {
+  visibility: visible;
+  pointer-events: all;
+}
+
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-option.selected {
+  background-color: #efefef;
+}
+
+.custom-option:hover {
+  background-color: #ddd;
+}
+
+.arrow {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.arrow::before {
+  left: -5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #394a6d;
+}
+
+.arrow::after {
+  left: 5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: #394a6d;
+}
+
+.open .arrow::before {
+  left: -5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.open .arrow::after {
+  left: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+circle.event {
+  stroke-width: 0.01;
+}
+
+circle.ghost-event {
+  stroke-dasharray: 0.02;
+  opacity: 0.5;
+}
+
+.event {
+  cursor: pointer;
+  stroke-width: 0.01;
+  stroke: #516a7b;
+  fill: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transition-property: stroke, stroke-width;
+  transition-property: stroke, stroke-width;
+}
+
+.event.highlighted {
+  stroke: #29353e;
+  stroke-width: 0.015;
+}
+
+.line {
+  stroke: #394a6d;
+  opacity: 0.7;
+}
+
+.curve-between {
+  stroke-width: 0.01;
+  stroke: #516a7b;
+  fill: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transition-property: stroke, stroke-width;
+  transition-property: stroke, stroke-width;
+}
+
+.curve-between.highlighted {
+  stroke: #29353e;
+  stroke-width: 0.015;
+}
+/*# sourceMappingURL=editor.css.map */

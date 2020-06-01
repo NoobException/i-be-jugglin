@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/editor.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/colors/colors-light.css" />
+  <link rel="stylesheet" href="styles/trick.css" />
+  <title>Editor</title>
+</head>
+
+<body>
+  <main>
+    <div id="menu">
+      <div id="juggler" class="trick-wrapper">
+        <trick>
+          [5, 3, ["t", "l", "r", -0.5, -0.3, 0.2, -0.3, 0.3, 1.4], ["loop", 0.6,
+          1.2, ["t", "r", "l", 0.5, -0.3, -0.2, -0.3, 0.6, 1.7], ["t", "l", "r",
+          -0.5, -0.3, 0.2, -0.3, 0.9, 2.0]]]
+        </trick>
+      </div>
+
+      <div id="trick-menu">
+        <div id="upper-menu">
+          
+
+          <input type="button" value="Add Ball Event" onclick="addBallEvent()"/>
+          <input type="button" value="Add Hand Event" onclick="addHandEvent()"/>
+          <input type="button" value="Clear" onclick="clearEvents()" class="danger" />
+        </div>
+        <div id="trick-notation">
+
+        </div>
+      </div>
+
+      <div id="event-menu">
+        <h2>Event menu</h2>        
+        <div class="value-wrapper">
+          Hand:
+          <br>
+          <h2>Left</h2>
+        </div>
+        <div class="value-wrapper">
+          Time:
+          <br>
+          <input type="text" name="time" />
+        </div>
+      </div>
+
+    </div>
+
+    <div id="timeline">
+      <svg id="timeline-svg" width="1px" height="1px" viewBox="0 0 1 1" preserveAspectRatio="xMinYMin meet">
+        <line x1 = "0" y1="0.25" x2="1000" y2 = "0.25" stroke-width="0.02" class="line"></line>
+        <line x1 = "0" y1="0.75" x2="1000" y2 = "0.25" stroke-width="0.02" class="line"></line>
+      </svg>
+    </div>
+  </main>
+</body>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="js/juggler.js"></script>
+<script src="js/editor.js"></script>
+
+</html>

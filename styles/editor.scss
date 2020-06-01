@@ -1,0 +1,287 @@
+$light-border-color: #aaa;
+$light-color: #fefefe;
+
+$event-marker-stroke-color:#516a7b;
+$event-marker-fill-color:#fff;
+$hand-line-color:#04212f;
+
+html {
+	height: 100%;
+}
+
+* {
+	font-family: "Varela Round", sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	height: 100%;
+}
+
+main {
+	display: grid;
+	margin: 0;
+	height: 100%;
+	grid-template-rows: 1fr minmax(300px, 1fr);
+	grid-template-columns: auto;
+	grid-template-areas: "menu" "timeline";
+	grid-gap: 1px;
+	background-color: $light-border-color;
+}
+
+#menu {
+	grid-area: menu;
+	background-color: $light-border-color;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 2fr 2fr;
+	grid-template-areas: "juggler trick-menu event-menu";
+	grid-gap: 1px;
+}
+
+#timeline {
+	grid-area: timeline;
+	background-color: #fff;
+}
+
+#juggler {
+	grid-area: juggler;
+	background-color: #fff;
+}
+
+#trick-menu {
+	grid-area: trick-menu;
+	display: grid;
+	grid-gap: 1px;
+	grid-template-rows: 2fr 4fr;
+	grid-template-columns: 100%;
+	grid-template-areas: "upper-menu" "trick-notation";
+}
+
+#event-menu {
+	grid-area: event-menu;
+	background-color: #fff;
+	padding: 5px;
+}
+
+#upper-menu {
+	grid-area: upper-menu;
+	background-color: #fff;
+	padding: 10px;
+}
+
+#trick-notation {
+	grid-area: trick-notation;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+}
+
+#copy-button {
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	font-size: 2rem;
+	border-radius: 5px;
+	border: $light-border-color 1px dashed;
+	background-color: $light-color;
+	cursor: pointer;
+	user-select: none;
+}
+
+#copy-button:hover {
+	background-color: darken($light-color, $amount: 10%);
+}
+
+#notation {
+	padding: 0 10px 0 10px;
+	font-size: 0.8rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.value-wrapper {
+	margin-bottom: 20px;
+}
+
+
+
+input[type=button] {
+	padding: 10px;
+	border: none;
+	border-radius: 2px;
+	color: #fff;
+  background-color: #2f4858;
+	cursor: pointer;
+}
+
+input[type=button]:hover {
+	background-color: lighten(#2f4858, $amount: 5%);
+}
+
+input[type=button].danger,
+.danger {
+	background-color: #c04b36;
+}
+
+input[type=button].danger:hover,
+.danger:hover {
+  background-color: lighten($color: #c04b36, $amount: 5%);
+}
+
+
+
+input[type=text] {
+	padding: 10px;
+	border: 2px solid #394a6d;
+	border-radius: 2px;
+}
+
+.custom-select-wrapper {
+	position: relative;
+	user-select: none;
+	width: 100%;
+}
+
+.custom-select {
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.custom-select-trigger {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	cursor: pointer;
+	border-width: 2px;
+	border-color: #394a6d;
+	border-style: solid;
+}
+
+.custom-options {
+	position: absolute;
+	display: block;
+	top: 100%;
+	left: 0;
+	right: 0;
+	border: 2px solid #394a6d;
+	border-top: 0;
+	visibility: hidden;
+	background: #fff;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.custom-select.open .custom-options {
+	visibility: visible;
+	pointer-events: all;
+}
+
+.custom-option {
+	position: relative;
+	display: block;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.custom-option.selected {
+	background-color: #efefef;
+}
+
+.custom-option:hover {
+	background-color: #ddd;
+}
+
+.arrow {
+	position: relative;
+	height: 15px;
+	width: 15px;
+}
+
+.arrow::before,
+.arrow::after {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	width: 0.15rem;
+	height: 100%;
+	transition: all 0.2s;
+}
+
+.arrow::before {
+	left: -5px;
+	transform: rotate(45deg);
+	background-color: #394a6d;
+}
+.arrow::after {
+	left: 5px;
+	transform: rotate(-45deg);
+	background-color: #394a6d;
+}
+.open .arrow::before {
+	left: -5px;
+	transform: rotate(-45deg);
+}
+.open .arrow::after {
+	left: 5px;
+	transform: rotate(45deg);
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+circle.event {
+	stroke-width: 0.01;
+}
+
+circle.ghost-event {
+	stroke-dasharray: 0.02;
+	opacity: 0.5;
+}
+
+.event {
+	cursor: pointer;
+  stroke-width: 0.01;
+  stroke: $event-marker-stroke-color;
+  fill: $event-marker-fill-color;
+  transition: all 0.3s ease;
+  transition-property: stroke, stroke-width;
+}
+
+.event.highlighted {
+  stroke: darken($color: $event-marker-stroke-color, $amount: 20%);
+  stroke-width: 0.015;
+}
+
+.line {
+  stroke: #394a6d;
+  opacity: 0.7;
+  
+}
+
+.curve-between {
+	stroke-width: 0.01;
+	stroke: $event-marker-stroke-color;
+  fill: none;
+  transition: all 0.3s ease;
+  transition-property: stroke, stroke-width;
+}
+
+.curve-between.highlighted {
+  stroke: darken($color: $event-marker-stroke-color, $amount: 20%);
+  stroke-width: 0.015;
+}

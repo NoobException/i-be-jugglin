@@ -1,0 +1,137 @@
+.trick-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+}
+
+.trick-card {
+  border: 2px solid;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.trick-canvas {
+  width: 200px;
+  height: 250px;
+}
+
+.trick-container {
+  text-align: center;
+}
+
+.trick-card-wrapper {
+  display: inline-block;
+}
+
+.trick-desc-wrapper {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 0;
+  height: 0;
+}
+
+.trick-desc-alone {
+  display: block;
+  border: 2px solid;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 5px;
+  width: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.trick-desc {
+  height: 50px;
+}
+
+.trick-card > .trick-desc {
+  border-top: 2px solid;
+}
+
+.trick-desc {
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.trick-desc > div {
+  padding: 5px;
+}
+
+.slider-wrapper {
+  width: 100%;
+  padding: 20px 0 20px 0;
+}
+
+.trick-slider {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 5px;
+  outline: none;
+  margin: 0;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.trick-slider:hover {
+  opacity: 1;
+}
+
+.trick-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.trick-slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  -moz-appearance: none;
+       appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.juggler-ball {
+  -webkit-transition: fill ease 0.5s;
+  transition: fill ease 0.5s;
+}
+/*# sourceMappingURL=trick.css.map */
