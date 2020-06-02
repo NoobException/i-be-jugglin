@@ -63,11 +63,11 @@ main {
   display: -ms-grid;
   display: grid;
   grid-gap: 1px;
-  -ms-grid-rows: 2fr 4fr;
-      grid-template-rows: 2fr 4fr;
+  -ms-grid-rows: 4fr 2fr;
+      grid-template-rows: 4fr 2fr;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-      grid-template-areas: "upper-menu" "trick-notation";
+      grid-template-areas: "trick-notation" "upper-menu";
 }
 
 #event-menu {
@@ -79,7 +79,7 @@ main {
 }
 
 #upper-menu {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: upper-menu;
   background-color: #fff;
@@ -87,7 +87,7 @@ main {
 }
 
 #trick-notation {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: trick-notation;
   padding: 10px;

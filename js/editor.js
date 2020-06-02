@@ -313,6 +313,11 @@ function clearEvents() {
   if (confirm("This will delete your trick. Are you sure?")) {
     svg.querySelectorAll("circle, path").forEach((e) => e.remove());
     throwEvents = [];
+    clearInterval(interval);
+    juggler_renderer=null;
+    document.getElementById("trick-notation").innerHTML = "";
+    document.getElementById("juggler").innerHTML = "";
+
   }
 }
 
