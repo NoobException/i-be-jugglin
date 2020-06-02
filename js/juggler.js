@@ -1,16 +1,6 @@
 const g = 10;
 const globalStyle = getComputedStyle(document.body);
 
-function getCoords(ctx, position) {
-  return {
-    x: (ctx.canvas.width * (1 + position.x)) / 2,
-    y: ctx.canvas.height - (ctx.canvas.width * (1 + position.y)) / 2,
-  };
-}
-function getLength(ctx, length) {
-  return (ctx.canvas.width * length) / 2;
-}
-
 class JugglerRenderer {
   constructor(juggler) {
     this.juggler = juggler;
@@ -320,7 +310,7 @@ class EventManager {
   }
   update(deltaTime) {
     this.time += deltaTime;
-    while (this.time > this.loopEnd) {
+    while (this.time > this.loopEnd - (this.loopEnd - this.loopStart)) {
       this.offset(this.loopStart - this.loopEnd);
       for (let i = 3; i < this.loop.length; i++) {
         this.parseEvents(this.loop[i], this.loopEnd - this.loopStart);
@@ -351,8 +341,15 @@ class Hand {
     ) {
       this.prevEvent.ball.update(this.prevEvent);
     }
+    if (
+      this.prevEvent !== undefined &&
+      this.prevEvent.type === EventTypes.CATCH
+    )
+      this.balls.push(this.prevEvent.ball);
+
     switch (nextEvent.type) {
       case EventTypes.THROW:
+        console.log("THROW");
         this.curve = new WildCurve(
           this.curve.getSpeed(this.curve.offset + this.curve.length),
           this.curve.getPosition(this.curve.offset + this.curve.length),
@@ -361,10 +358,14 @@ class Hand {
           this.curve.offset + this.curve.length,
           nextEvent.curve.offset
         );
+
         this.nextEvent.ball = this.balls.pop();
+
         this.nextEvent.pairedEvent.ball = this.nextEvent.ball;
         break;
+
       case EventTypes.CATCH:
+        console.log("CATCH");
         this.curve = new WildCurve(
           this.curve.getSpeed(this.curve.offset + this.curve.length),
           this.curve.getPosition(this.curve.offset + this.curve.length),
@@ -377,7 +378,6 @@ class Hand {
           this.curve.offset + this.curve.length,
           nextEvent.curve.offset + nextEvent.curve.length
         );
-        this.balls.push(this.nextEvent.ball);
         break;
       case EventTypes.MOVE:
         this.curve = new WildCurve(
@@ -517,8 +517,6 @@ class Parabola extends Curve {
   }
 }
 
-//Placement of jugglers in DOM
-
 let juggler_renderers = [];
 
 document.querySelectorAll("trick").forEach((element) => {
@@ -540,3 +538,5 @@ if (juggler_renderers.length != 0) {
 }
 
 console.log(juggler_renderers);
+
+export { Juggler, JugglerRenderer };
