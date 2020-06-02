@@ -543,15 +543,15 @@ class Parabola extends Curve {
 
 class NotEnoughBalls extends Error {
   constructor(hand) {
-    super("Not enough balls.");
-    this.hand = hand;
+    super("Not enough balls in " + hand + " hand");
   }
 }
 
 class UnspecifiedHandAction extends Error {
   constructor(hand) {
-    super("Hand action was not specified");
-    this.hand = hand;
+    super(
+      hand[0].toUpperCase() + hand.slice(1) + " hand action was not specified"
+    );
   }
 }
 
