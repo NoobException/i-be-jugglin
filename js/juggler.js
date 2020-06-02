@@ -188,6 +188,8 @@ class EventManager {
       this.parseEvents(this.loop[i], this.loopEnd - this.loopStart);
       i++;
     }
+    if (this.lhandEvents.length == 0) throw new UnspecifiedHandAction("left");
+    if (this.rhandEvents.length == 0) throw new UnspecifiedHandAction("right");
   }
   parseEvents(data, offset) {
     if (data[0] === "t") {
@@ -321,8 +323,19 @@ class EventManager {
       this.rhand.getNextEventTime() <= this.time
     ) {
       if (this.rhand.getNextEventTime() <= this.lhand.getNextEventTime())
-        this.rhand.update(this.getClosestEvent(this.rhandEvents));
-      else this.lhand.update(this.getClosestEvent(this.lhandEvents));
+        try {
+          this.rhand.update(this.getClosestEvent(this.rhandEvents));
+        } catch (exception) {
+          exception.hand = "right";
+          throw exception;
+        }
+      else
+        try {
+          this.lhand.update(this.getClosestEvent(this.lhandEvents));
+        } catch (exception) {
+          exception.hand = "left";
+          throw exception;
+        }
     }
   }
 }
@@ -349,7 +362,6 @@ class Hand {
 
     switch (nextEvent.type) {
       case EventTypes.THROW:
-        console.log("THROW");
         this.curve = new WildCurve(
           this.curve.getSpeed(this.curve.offset + this.curve.length),
           this.curve.getPosition(this.curve.offset + this.curve.length),
@@ -358,14 +370,13 @@ class Hand {
           this.curve.offset + this.curve.length,
           nextEvent.curve.offset
         );
-
+        if (this.balls.length == 0) throw new NotEnoughBalls();
         this.nextEvent.ball = this.balls.pop();
 
         this.nextEvent.pairedEvent.ball = this.nextEvent.ball;
         break;
 
       case EventTypes.CATCH:
-        console.log("CATCH");
         this.curve = new WildCurve(
           this.curve.getSpeed(this.curve.offset + this.curve.length),
           this.curve.getPosition(this.curve.offset + this.curve.length),
@@ -450,16 +461,23 @@ class WildCurve extends Curve {
   constructor(v0, p0, v1, p1, t0, t1) {
     let t = t1 - t0;
     super(t, t0);
-    this.a = {
-      x: (v0.x + v1.x) / (t * t) - (2 * (p1.x - p0.x)) / (t * t * t),
-      y: (v0.y + v1.y) / (t * t) - (2 * (p1.y - p0.y)) / (t * t * t),
-    };
-    this.b = {
-      x: (3 * (p1.x - p0.x)) / (t * t) - (2 * v0.x + v1.x) / t,
-      y: (3 * (p1.y - p0.y)) / (t * t) - (2 * v0.y + v1.y) / t,
-    };
-    this.c = v0;
-    this.d = p0;
+    if (t != 0) {
+      this.a = {
+        x: (v0.x + v1.x) / (t * t) - (2 * (p1.x - p0.x)) / (t * t * t),
+        y: (v0.y + v1.y) / (t * t) - (2 * (p1.y - p0.y)) / (t * t * t),
+      };
+      this.b = {
+        x: (3 * (p1.x - p0.x)) / (t * t) - (2 * v0.x + v1.x) / t,
+        y: (3 * (p1.y - p0.y)) / (t * t) - (2 * v0.y + v1.y) / t,
+      };
+      this.c = v0;
+      this.d = p0;
+    } else {
+      this.a = { x: 0, y: 0 };
+      this.b = { x: 0, y: 0 };
+      this.c = v1;
+      this.d = p1;
+    }
   }
   getPosition(t) {
     let time = t - this.offset;
@@ -494,12 +512,18 @@ class Point extends Curve {
 class Parabola extends Curve {
   constructor(p0, p1, length, offset) {
     super(length, offset);
-    this.a = { x: 0, y: -0.5 * g };
-    this.b = {
-      x: (p1.x - p0.x) / length,
-      y: (p1.y - p0.y) / length + 0.5 * g * length,
-    };
-    this.c = { x: p0.x, y: p0.y };
+    if (length != 0) {
+      this.a = { x: 0, y: -0.5 * g };
+      this.b = {
+        x: (p1.x - p0.x) / length,
+        y: (p1.y - p0.y) / length + 0.5 * g * length,
+      };
+      this.c = { x: p0.x, y: p0.y };
+    } else {
+      this.a = { x: 0, y: 0 };
+      this.b = { x: 0, y: 0 };
+      this.c = { x: p1.x, y: p1.y };
+    }
   }
   getPosition(t) {
     let time = t - this.offset;
@@ -514,6 +538,20 @@ class Parabola extends Curve {
       x: this.b.x,
       y: 2 * this.a.y * time + this.b.y,
     };
+  }
+}
+
+class NotEnoughBalls extends Error {
+  constructor(hand) {
+    super("Not enough balls.");
+    this.hand = hand;
+  }
+}
+
+class UnspecifiedHandAction extends Error {
+  constructor(hand) {
+    super("Hand action was not specified");
+    this.hand = hand;
   }
 }
 
@@ -536,7 +574,5 @@ if (juggler_renderers.length != 0) {
     });
   }, 1000 / FPS);
 }
-
-console.log(juggler_renderers);
 
 export { Juggler, JugglerRenderer };

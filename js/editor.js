@@ -289,14 +289,23 @@ function parseTrick() {
   document.getElementById("trick-notation").innerHTML = JSON.stringify(
     trick_data
   );
-  console.log(trick_data);
-  juggler_renderer = new JugglerRenderer(new Juggler(trick_data));
+  try {
+    juggler_renderer = new JugglerRenderer(new Juggler(trick_data));
+  } catch (exception) {
+    console.error(exception.message);
+    return;
+  }
   juggler_wrapper.innerHTML = "";
   juggler_wrapper.appendChild(juggler_renderer.main_div);
 
   const FPS = 60;
   interval = setInterval(() => {
-    juggler_renderer.update(juggler_renderer.slider.value / 100 / FPS);
+    try {
+      juggler_renderer.update(juggler_renderer.slider.value / 100 / FPS);
+    } catch (exception) {
+      console.error(exception.message);
+      clearInterval(interval);
+    }
   }, 1000 / FPS);
 }
 
