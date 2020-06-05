@@ -4,6 +4,9 @@ $dark-border-color: #2f4858;
 $nav-height: 70px;
 $footer-height: 70px;
 
+$secondary-font: 'Hind Vadodara', sans-serif;
+$primary-font: 'Varela Round', sans-serif;
+
 body,
 #top-nav,
 .nav-item {
@@ -25,7 +28,7 @@ body {
 }
 
 body {
-  font-family: "Varela Round", sans-serif;
+  font-family: $primary-font;
   margin: 0;
   font-size: 14px;
   display: flex;
@@ -40,6 +43,18 @@ nav {
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+#page-name {
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  align-items: center;
+  border-right-width: 1px;
+  border-right-style: solid;
+  font-size: 1.1rem;
 }
 
 .hidden {
@@ -243,11 +258,53 @@ section {
 }
 
 footer {
+  font-family: $secondary-font;
   height: $footer-height;
+  font-size: 1.1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  border-top: 1px solid;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.button {
+  width: fit-content;
+  height: fit-content;
+  display: block;
+  border-radius: 5px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+}
+
+
+#big-button {
+  padding: 20px;
+  font-size: 2.4rem;
+}
+
+#landing-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "slogan action";
+}
+
+
+#slogan {
+  grid-area: slogan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#action {
+  grid-area: action;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

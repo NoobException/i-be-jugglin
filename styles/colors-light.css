@@ -17,6 +17,10 @@ nav {
   color: #ffffff;
 }
 
+#page-name {
+  border-color: #daded4;
+}
+
 #hovered-icon-text {
   color: #2f4858;
 }
@@ -34,7 +38,7 @@ nav {
 }
 
 footer {
-  border-color: #daded4;
+  border-top-color: #daded4;
 }
 
 .juggler-body {
@@ -69,4 +73,7 @@ footer {
   background: #ffffff;
 }
 
+.button {
+  background-color: #2f4858;
+}
 /*# sourceMappingURL=colors-light.css.map */

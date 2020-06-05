@@ -21,7 +21,9 @@ nav {
   background-color: $primary-dark-color;
   color: $primary-color;
 }
-
+#page-name {
+  border-color: $light-border-color;
+}
 #hovered-icon-text {
   color: $primary-dark-color;
 }
@@ -39,7 +41,7 @@ nav {
 }
 
 footer {
-  border-color: $light-border-color;
+  border-top-color: $light-border-color;
 }
 
 .juggler-body {
@@ -72,4 +74,9 @@ footer {
 .trick-slider::-webkit-slider-thumb {
   border-color: $primary-dark-color;
   background: $primary-color;
+}
+
+
+.button {
+  background-color: $primary-dark-color;
 }
