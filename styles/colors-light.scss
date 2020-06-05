@@ -28,7 +28,7 @@ nav {
   color: $primary-dark-color;
 }
 
-#top-nav .nav-icons {
+#top-nav .nav-links {
   border-color: $light-border-color;
 }
 
@@ -38,6 +38,12 @@ nav {
 
 .trick-desc-alone {
   border-color: $primary-dark-color;
+}
+
+
+#landing-main {
+
+  background: linear-gradient(235deg, lighten($primary-dark-color, 30%) 0%, $primary-dark-color 100%);
 }
 
 footer {
@@ -79,4 +85,14 @@ footer {
 
 .button {
   background-color: $primary-dark-color;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: lighten($color: $primary-dark-color, $amount: 4%);
+}
+
+#logo {
+  color: $primary-dark-color;
+  filter: invert(22%) sepia(74%) saturate(250%) hue-rotate(159deg) brightness(95%) contrast(93%);
 }

@@ -7,6 +7,10 @@ $footer-height: 70px;
 $secondary-font: 'Hind Vadodara', sans-serif;
 $primary-font: 'Varela Round', sans-serif;
 
+a {
+  text-decoration: none;
+}
+
 body,
 #top-nav,
 .nav-item {
@@ -37,12 +41,24 @@ body {
 
 nav {
   height: $nav-height;
-  border-bottom: 1px solid $light-border-color;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+#logo-container {
+  height: $nav-height;
+  width: $nav-height;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#logo {
+  width: 100%;
+  height: 100%;
 }
 
 #page-name {
@@ -84,8 +100,9 @@ nav {
 }
 
 .nav-item {
-  font-size: 2rem;
-  width: $nav-height;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  padding: 15px;
   height: $nav-height;
   flex-direction: column;
   align-items: center;
@@ -94,14 +111,16 @@ nav {
   cursor: pointer;
 }
 
-.nav-icons {
+.nav-links {
   display: flex;
   flex-direction: row;
 }
 
-#top-nav .nav-icons {
-  border-right: 1px solid;
+#top-nav .nav-links {
+  border-left-width: 1px;
+  border-left-style:  solid;
 }
+
 
 #mobile-nav {
   height: $nav-height;
@@ -280,7 +299,6 @@ footer {
   cursor: pointer;
 }
 
-
 #big-button {
   padding: 20px;
   font-size: 2.4rem;
@@ -300,6 +318,18 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: white;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+    font-family: $primary-font;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    font-family: $secondary-font;
+  }
 }
 
 #action {

@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
     <link id="light-mode-link" rel="stylesheet" type="text/css" href="styles/colors-light.css" />
-    <link id="dark-mode-link" rel="stylesheet" type="text/css" href="styles/colors-dark.css" />
+    <link id="dark-mode-link" rel="stylesheet alternate" type="text/css" href="styles/colors-dark.css" />
 
     <link rel="stylesheet" type="text/css" href="styles/narrow-screen.css" media="screen and (max-width: 800px)" />
     <link rel="stylesheet" type="text/css" href="styles/wide-screen.css" media="screen and (min-width: 801px)" />
@@ -23,38 +23,26 @@
 <body>
     <header>
         <nav id="top-nav">
-            <div id="page-name">
-                i be jugglin
+            <div id="logo-container">
+                <object id="logo" type="image/svg+xml" data="logo.svg">
+                </object>
             </div>
-            <div class="nav-icons">
-                <a class="nav-item">
-                    <ion-icon name="home-outline"></ion-icon>
-                    <span class="tooltip">Homepage</span>
-                </a>
-
-                <a class="nav-item">
-                    <ion-icon name="cellular-outline"></ion-icon>
-                    <span class="tooltip">Tricks by difficulty</span>
-                </a>
-
-                <div class="nav-item" onclick="toggleColorMode()">
-                    <ion-icon id="moon-icon" name="moon-outline"></ion-icon>
-                    <ion-icon id="sun-icon" class="hidden" name="sunny-outline"></ion-icon>
-                    <span id="color-mode-tooltip" class="tooltip">Switch to dark mode</span>
-                </div>
+            <div class="nav-links">
+                <a class="nav-item">home</a>
+                <a class="nav-item" href="trick.html">tricks</a>
+                <a class="nav-item">about</a>
             </div>
-            <div id="hovered-icon-text"></div>
         </nav>
     </header>
 
     <main id="landing-main">
         <div id="slogan">
-            <h1>Do you want to learn how to juggle?</h1>
-            <span>Learn easily with us!</span>
+            <h1>Learn new juggling tricks easily!</h1>
+            <h2>Explore an organized collection of juggling tricks!</h2>
         </div>
 
         <div id="action">
-            <a id="big-button" class = "button"> Explore tricks</a>
+            <a id="big-button" class = "button" href="trick.html"> Explore tricks</a>
         </div>
 
     </main>

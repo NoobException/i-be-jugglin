@@ -25,7 +25,7 @@ nav {
   color: #2f4858;
 }
 
-#top-nav .nav-icons {
+#top-nav .nav-links {
   border-color: #daded4;
 }
 
@@ -35,6 +35,10 @@ nav {
 
 .trick-desc-alone {
   border-color: #2f4858;
+}
+
+#landing-main {
+  background: linear-gradient(235deg, #6e97b2 0%, #2f4858 100%);
 }
 
 footer {
@@ -75,5 +79,17 @@ footer {
 
 .button {
   background-color: #2f4858;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #365365;
+}
+
+#logo {
+  color: #2f4858;
+  -webkit-filter: invert(22%) sepia(74%) saturate(250%) hue-rotate(159deg) brightness(95%) contrast(93%);
+          filter: invert(22%) sepia(74%) saturate(250%) hue-rotate(159deg) brightness(95%) contrast(93%);
 }
 /*# sourceMappingURL=colors-light.css.map */
