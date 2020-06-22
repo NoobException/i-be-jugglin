@@ -1,0 +1,23 @@
+.juggler-body {
+  fill: none;
+  stroke: #2f4858;
+  stroke-width: 1;
+}
+
+.juggler-arm {
+  fill: none;
+  stroke: #2f4858;
+  stroke-width: 1;
+}
+
+.juggler-ball {
+  fill: #51f38a;
+  stroke: black;
+  stroke-width: 1;
+}
+
+.juggler-ball {
+  -webkit-transition: fill ease 0.5s;
+  transition: fill ease 0.5s;
+}
+/*# sourceMappingURL=juggler.css.map */

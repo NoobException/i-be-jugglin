@@ -1,0 +1,119 @@
+.trick-card {
+  border: 2px solid;
+  border-radius: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.page-header {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.trick-canvas {
+  background-color: #2f4858;
+  width: 200px;
+  height: 250px;
+}
+
+.trick-container {
+  text-align: center;
+}
+
+.trick-card-wrapper {
+  display: inline-block;
+}
+
+.trick-desc-wrapper {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 0;
+  height: 0;
+}
+
+.trick-desc-alone {
+  display: block;
+  border: 2px solid;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 5px;
+  width: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.trick-desc {
+  height: 50px;
+}
+
+.trick-card > .trick-desc {
+  border-top: 2px solid;
+}
+
+.trick-desc {
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.trick-desc > div {
+  padding: 5px;
+}
+
+.slider-wrapper {
+  width: 100%;
+  padding: 20px 0 20px 0;
+}
+
+.trick-slider {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 5px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.trick-slider:hover {
+  opacity: 1;
+}
+
+.trick-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.trick-slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  -moz-appearance: none;
+       appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid;
+  cursor: pointer;
+}
+/*# sourceMappingURL=trick.css.map */

@@ -1,214 +1,5 @@
-a {
-  text-decoration: none;
-}
-
-body,
-#top-nav,
-.nav-item {
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
-}
-
-#hovered-icon-text {
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-
-.juggler-ball {
-  -webkit-transition: fill ease 0.5s;
-  transition: fill ease 0.5s;
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  font-family: "Varela Round", sans-serif;
-  margin: 0;
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-nav {
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-#logo-container {
-  height: 70px;
-  width: 70px;
-  padding: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#logo {
-  width: 100%;
-  height: 100%;
-}
-
-#page-name {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: center;
-  padding: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-right-width: 1px;
-  border-right-style: solid;
-  font-size: 1.1rem;
-}
-
-.hidden {
-  display: none;
-}
-
-.tooltip {
-  display: none;
-}
-
-#hovered-icon-text {
-  font-size: 1.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 70px;
-  padding: 0 10px 0 10px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-#hovered-icon-text:not(.visible) {
-  opacity: 0;
-}
-
-#hovered-icon-text.visible {
-  opacity: 1;
-}
-
-.nav-item {
-  font-size: 1.4rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 15px;
-  height: 70px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-#top-nav .nav-links {
-  border-left-width: 1px;
-  border-left-style: solid;
-}
-
-#mobile-nav {
-  height: 70px;
-  width: 100%;
-}
-
-#mobile-nav .nav-dropdown {
-  width: 100%;
-  position: relative;
-  top: 70px;
-  left: 0;
-}
-
-.nav-dropdown {
-  list-style: none;
-  margin: 0;
-}
-
-.nav-dropdown li {
-  width: 100%;
-  display: block;
-  height: 70px;
-  font-size: 1.4rem;
-}
-
-#nav-toggle {
-  position: absolute;
-}
-
-main {
-  width: 100%;
-  margin: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-}
-
 .page-trick-name {
   text-align: center;
-}
-
-section {
-  margin: auto;
-  text-align: justify;
-}
-
-#trick-of-the-week {
-  float: left;
-  margin-right: 50px;
 }
 
 .trick-card {
@@ -330,10 +121,196 @@ section {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
+body,
+#top-nav,
+.nav-item {
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+#hovered-icon-text {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  margin: 0;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#logo-container {
+  height: 70px;
+  width: 70px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#logo {
+  width: 100%;
+  height: 100%;
+}
+
+#page-name {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-right-width: 1px;
+  border-right-style: solid;
+  font-size: 1.1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-item {
+  font-size: 1.4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+  height: 70px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#top-nav {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+#top-nav .nav-links {
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+#mobile-nav {
+  height: 70px;
+  width: 100%;
+}
+
+#mobile-nav .nav-dropdown {
+  width: 100%;
+  position: relative;
+  top: 70px;
+  left: 0;
+}
+
+.nav-dropdown {
+  list-style: none;
+  margin: 0;
+}
+
+.nav-dropdown li {
+  width: 100%;
+  display: block;
+  height: 70px;
+  font-size: 1.4rem;
+}
+
+#nav-toggle {
+  position: absolute;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+section {
+  margin: auto;
+  text-align: justify;
+}
+
+.button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+  border-radius: 5px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+}
+
 footer {
   font-family: "Hind Vadodara", sans-serif;
   height: 70px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,81 +328,5 @@ footer {
       flex-shrink: 0;
   border-top-width: 1px;
   border-top-style: solid;
-}
-
-.button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: block;
-  border-radius: 5px;
-  color: #fff;
-  padding: 15px;
-  cursor: pointer;
-}
-
-#big-button {
-  padding: 20px;
-  font-size: 2.4rem;
-}
-
-#landing-main {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "slogan action";
-}
-
-#slogan {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: slogan;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: white;
-  text-align: center;
-}
-
-#slogan h1 {
-  font-size: 3rem;
-  font-family: "Varela Round", sans-serif;
-}
-
-#slogan h2 {
-  font-size: 1.5rem;
-  font-weight: lighter;
-  font-family: "Hind Vadodara", sans-serif;
-}
-
-#action {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: action;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 /*# sourceMappingURL=main.css.map */

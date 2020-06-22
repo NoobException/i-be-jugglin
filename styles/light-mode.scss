@@ -1,0 +1,77 @@
+// TODO: replace @import with @use as soon as compiler allows it
+@import "light-colors";
+
+body {
+	background-color: $primary-color;
+	color: $primary-font-color;
+}
+
+nav {
+	background-color: $primary-color;
+}
+
+.nav-item {
+	background-color: $primary-color;
+	color: $primary-dark-color;
+}
+
+.nav-item:hover {
+	background-color: $primary-dark-color;
+	color: $primary-color;
+}
+
+#page-name {
+	border-color: $light-border-color;
+}
+#hovered-icon-text {
+	color: $primary-dark-color;
+}
+
+#top-nav,
+#top-nav .nav-links {
+	border-color: $light-border-color;
+}
+
+.trick-card {
+	border-color: $primary-dark-color;
+}
+
+.trick-desc-alone {
+	border-color: $primary-dark-color;
+}
+
+.trick-slider {
+	background: $primary-dark-color;
+}
+
+#landing-main {
+	background: linear-gradient(235deg, lighten($primary-dark-color, 30%) 0%, $primary-dark-color 100%);
+}
+
+footer {
+	border-top-color: $light-border-color;
+}
+
+.trick-slider::-moz-range-thumb {
+	border-color: $primary-dark-color;
+	background: $primary-color;
+}
+
+.trick-slider::-webkit-slider-thumb {
+	border-color: $primary-dark-color;
+	background: $primary-color;
+}
+
+.button {
+	background-color: $primary-dark-color;
+	transition: background-color 0.2s ease;
+}
+
+.button:hover {
+	background-color: lighten($color: $primary-dark-color, $amount: 4%);
+}
+
+#logo {
+	color: $primary-dark-color;
+	filter: invert(22%) sepia(74%) saturate(250%) hue-rotate(159deg) brightness(95%) contrast(93%);
+}

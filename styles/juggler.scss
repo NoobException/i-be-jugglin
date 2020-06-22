@@ -1,0 +1,24 @@
+// TODO: replace @import with @use as soon as compiler allows it
+@import 'light-colors';
+
+.juggler-body {
+  fill: none;
+  stroke: $primary-dark-color;
+  stroke-width: 1;
+}
+
+.juggler-arm {
+  fill: none;
+  stroke: $primary-dark-color;
+  stroke-width: 1;
+}
+
+.juggler-ball {
+  fill: #51f38a;
+  stroke: black;
+  stroke-width: 1;
+}
+
+.juggler-ball {
+  transition: fill ease 0.5s;
+}

@@ -1,4 +1,62 @@
 section {
   width: 700px;
 }
+
+#landing-main {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#slogan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+#slogan h1 {
+  font-size: 2.4rem;
+  font-family: "Varela Round", sans-serif;
+}
+
+#slogan h2 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  font-family: "Hind Vadodara", sans-serif;
+}
+
+#action {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#big-button {
+  padding: 20px;
+  font-size: 1.6rem;
+}
 /*# sourceMappingURL=wide-screen.css.map */

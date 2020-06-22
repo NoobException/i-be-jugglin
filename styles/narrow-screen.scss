@@ -1,5 +1,43 @@
+$secondary-font: 'Hind Vadodara', sans-serif;
+$primary-font: 'Varela Round', sans-serif;
 
 section {
   width: 80%;
 }
 
+#landing-main {
+  padding-top: 50px;
+  display:flex;
+  flex-direction: column;
+}
+
+#slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  h1 {
+    font-size: 1.5rem;
+    font-family: $primary-font;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    font-family: $secondary-font;
+  }
+}
+
+#action {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#big-button {
+  padding: 15px;
+  font-size: 1.4rem;
+}
